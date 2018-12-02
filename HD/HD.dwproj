@@ -6,10 +6,67 @@
     <Name>HD.database</Name>
     <FullPath>HD.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Samochody.cube</Name>
+      <FullPath>Samochody.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Samochody.partitions</Name>
+          <FullPath>Samochody.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Auta.dim</Name>
+      <FullPath>Auta.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salony.dim</Name>
+      <FullPath>Salony.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Klienci.dim</Name>
+      <FullPath>Klienci.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Czas.dim</Name>
+      <FullPath>Czas.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Samochody.ds</Name>
+      <FullPath>Samochody.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Samochody.dsv</Name>
+      <FullPath>Samochody.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Samochody</Id>
+            <Name>Samochody</Name>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=DESKTOP-83DJNK9;Integrated Security=SSPI;Initial Catalog=Samochody</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Samochody</Id>
+            <Name>Samochody</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
